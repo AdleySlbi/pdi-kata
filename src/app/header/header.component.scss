@@ -1,0 +1,43 @@
+.header {
+    width: 100%;
+    background-color: #000;
+    background: linear-gradient(#424242, #000);
+    padding: 10px 0;
+    .header-w {
+        width: 94%;
+        margin: 0 3%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .company-logo {
+            max-width: 60px;
+            max-height: 120px;
+        }
+        .right-w {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 40%;
+            .search-bar {
+                width: 40%;
+                img {
+                    color: #fff;
+                    display: block;
+                    margin: auto;
+                    width: 25px;
+                }
+            }
+            .lang-w {
+                width: 60%;
+                display: flex;
+                justify-content: space-around;
+                img {
+                    width: 25px;
+                }
+                .not-active {
+                    filter: brightness(80%);
+                }
+            }
+        }
+    }
+}
