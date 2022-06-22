@@ -1,0 +1,63 @@
+h1 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: -10px;
+}
+
+h2 {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 12px;
+    margin: 0;
+}
+
+.info-title {
+    font-weight: 100;
+    font-size: 10px;
+}
+
+.info-data {
+    font-weight: 300;
+    font-size: 11px;
+}
+
+.one-movie {
+    display: flex;
+    padding: 0;
+    // Todo : Ajuster pour avoir 3 card sur une row sur la vue pc 
+    width: 500px;
+    // height: 160px;
+    .left-w {
+        width: 70%;
+        padding: 2%;
+        .header-w {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .film-info {
+            display: flex;
+            flex-wrap: wrap;
+            .one-info {
+                width: 16%;
+                margin: 0 2%;
+                span {
+                    display: block;
+                    text-align: center;
+                }
+                .info-title {
+                    background-color: #F3F3F3;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .right-w {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F3F3F3;
+    }
+}
