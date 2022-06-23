@@ -18,24 +18,19 @@ export class AllMovieComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.imdbSlice)
   }
 
   ngOnChanges(changes: SimpleChange): void {
     let imdbSearched: any;
     if(this.searchTextField !== "") {
-      console.log(this.imdb);
-      // Comprendre pourquoi le filter ne fonctionne pas
       imdbSearched = this.imdb.filter( test => test.originalTitle.includes(this.searchTextField))
       this.imdbSlice = imdbSearched.slice(0,12)
     } else {
       this.imdbSlice = this.imdb.slice(0,12)
     }
-    // Raffraichir le tableau avec les bonnes donneés
   }
 
   onPageChange(event: PageEvent) {
-    console.log(event)
     const startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
     if(endIndex > this.imdb.length) {

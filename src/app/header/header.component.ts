@@ -19,7 +19,6 @@ export class HeaderComponent implements OnInit {
 
   onSearchTextEntered(searchValue: any){
     this.searchText = searchValue;
-    console.log(this.searchText);
     this.searchTextChangedChild.emit(this.searchText);
   }
 

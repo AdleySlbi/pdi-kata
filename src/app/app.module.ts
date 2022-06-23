@@ -13,6 +13,7 @@ import { AllMovieComponent } from './all-movie/all-movie.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
+import { EditFormComponent } from './edit-form/edit-form.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     OneMovieComponent,
     AllMovieComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,
