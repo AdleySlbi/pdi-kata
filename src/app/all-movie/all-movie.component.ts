@@ -13,7 +13,7 @@ export class AllMovieComponent implements OnInit {
   // Avec une vraie API, j'aurai fais mon appel vers la BDD sur ce component
   public imdb: any = imdbData.imdb;
 
-  public imdbSlice = this.imdb.slice(0,10)
+  public imdbSlice = this.imdb.slice(0,12)
 
   constructor() { }
 
@@ -29,10 +29,10 @@ export class AllMovieComponent implements OnInit {
       imdbSearched = this.imdb.filter( test => test.originalTitle.includes(this.searchTextField))
       // console.log(this.imdb.filter( test => test.originalTitle.toLowerCase().includes(this.searchTextField)))
       // imdbSearched = this.imdb.filter(test => test.originalTitle == )
-      this.imdbSlice = imdbSearched.slice(0,10)
+      this.imdbSlice = imdbSearched.slice(0,12)
 
     } else {
-      this.imdbSlice = this.imdb.slice(0,10)
+      this.imdbSlice = this.imdb.slice(0,12)
     }
     // Raffraichir le tableau avec les bonnes donneés
   }

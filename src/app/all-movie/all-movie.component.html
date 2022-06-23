@@ -4,7 +4,7 @@
             <app-one-movie class="test" [film]="film" *ngIf="searchTextField === '' || film.originalTitle.toLowerCase().includes(searchTextField) "></app-one-movie>
         </div>
         <mat-paginator [length]="this.imdb.length"
-              [pageSize]="10"
+              [pageSize]="12"
               [pageSizeOptions]="[5, 10, 25, 100]"
               aria-label="Select page"
               (page)="onPageChange($event)"
