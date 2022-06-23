@@ -5,8 +5,8 @@
         <div class="left-w">
             <div class="header-w">
                 <div class="title">
-                    <h1>{{ film.primaryTitle }}</h1>
-                    <h2>Original title: {{ film.origianlTitle }}</h2>
+                    <span class="h1">{{ film.primaryTitle }}</span>
+                    <span class="h2">Original title: {{ film.originalTitle }}</span>
                 </div>
                 <div class="img-w">
                     <img src="../../assets/icons/icon_pencil.svg" alt="Edit button shaped as a pencil">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="one-info">
                     <span class="info-title">Minutes</span>
-                    <span class="info-data"> {{ film.runtimesMinutes }} </span>
+                    <span class="info-data"> {{ film.runtimeMinutes }} </span>
                 </div>
                 <div class="one-info">
                     <span class="info-title">Start year</span>

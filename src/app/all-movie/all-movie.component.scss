@@ -49,7 +49,11 @@ mat-paginator {
 }
 
 @media (min-width: 1024px) {
-    .one-movie-w {
-        width: 32%;
+    .all-movie-w { 
+        .all-movie {
+            .one-movie-w {
+                width: 32%;
+            }
+        }
     }
 }
