@@ -27,10 +27,7 @@ export class AllMovieComponent implements OnInit {
       console.log(this.imdb);
       // Comprendre pourquoi le filter ne fonctionne pas
       imdbSearched = this.imdb.filter( test => test.originalTitle.includes(this.searchTextField))
-      // console.log(this.imdb.filter( test => test.originalTitle.toLowerCase().includes(this.searchTextField)))
-      // imdbSearched = this.imdb.filter(test => test.originalTitle == )
       this.imdbSlice = imdbSearched.slice(0,12)
-
     } else {
       this.imdbSlice = this.imdb.slice(0,12)
     }
