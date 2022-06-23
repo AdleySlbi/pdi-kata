@@ -9,13 +9,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { OneMovieComponent } from './one-movie/one-movie.component';
 import {MatCardModule} from '@angular/material/card';
+import { AllMovieComponent } from './all-movie/all-movie.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    OneMovieComponent
+    OneMovieComponent,
+    AllMovieComponent
   ],
   imports: [
     BrowserModule,
