@@ -11,6 +11,8 @@ import { OneMovieComponent } from './one-movie/one-movie.component';
 import {MatCardModule} from '@angular/material/card';
 import { AllMovieComponent } from './all-movie/all-movie.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { SearchBoxComponent } from './search-box/search-box.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     AppComponent,
     HeaderComponent,
     OneMovieComponent,
-    AllMovieComponent
+    AllMovieComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatInputModule,
     MatIconModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

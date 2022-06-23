@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChange } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import imdbData from '../../assets/json/imdb.json'
 
@@ -8,6 +8,8 @@ import imdbData from '../../assets/json/imdb.json'
   styleUrls: ['./all-movie.component.scss']
 })
 export class AllMovieComponent implements OnInit {
+  @Input() searchTextField = "";
+
   // Avec une vraie API, j'aurai fais mon appel vers la BDD sur ce component
   public imdb: any = imdbData.imdb;
 
@@ -17,6 +19,22 @@ export class AllMovieComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.imdbSlice)
+  }
+
+  ngOnChanges(changes: SimpleChange): void {
+    let imdbSearched: any;
+    if(this.searchTextField !== "") {
+      console.log(this.imdb);
+      // Comprendre pourquoi le filter ne fonctionne pas
+      imdbSearched = this.imdb.filter( test => test.originalTitle.includes(this.searchTextField))
+      // console.log(this.imdb.filter( test => test.originalTitle.toLowerCase().includes(this.searchTextField)))
+      // imdbSearched = this.imdb.filter(test => test.originalTitle == )
+      this.imdbSlice = imdbSearched.slice(0,10)
+
+    } else {
+      this.imdbSlice = this.imdb.slice(0,10)
+    }
+    // Raffraichir le tableau avec les bonnes donneés
   }
 
   onPageChange(event: PageEvent) {

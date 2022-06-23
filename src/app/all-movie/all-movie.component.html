@@ -1,7 +1,7 @@
 <section class="all-movie-w">
     <div class="all-movie" *ngIf="imdbSlice">
         <div *ngFor="let film of imdbSlice" class="one-movie-w">
-            <app-one-movie class="test" [film]="film" ></app-one-movie>
+            <app-one-movie class="test" [film]="film" *ngIf="searchTextField === '' || film.originalTitle.toLowerCase().includes(searchTextField) "></app-one-movie>
         </div>
         <mat-paginator [length]="this.imdb.length"
               [pageSize]="10"
