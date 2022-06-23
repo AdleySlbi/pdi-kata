@@ -1,8 +1,7 @@
 <section class="all-movie-w">
-    <div class="all-movie">
-        
+    <div class="all-movie" *ngIf="imdb">
         <div *ngFor="let film of imdb" class="one-movie-w">
-            <app-one-movie class="test"></app-one-movie>
+            <app-one-movie class="test" [film]="film" ></app-one-movie>
         </div>
     </div>
 </section>
