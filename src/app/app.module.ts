@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { OneMovieComponent } from './one-movie/one-movie.component';
 import {MatCardModule} from '@angular/material/card';
 import { AllMovieComponent } from './all-movie/all-movie.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AllMovieComponent } from './all-movie/all-movie.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,15 @@
 <section class="all-movie-w">
-    <div class="all-movie" *ngIf="imdb">
-        <div *ngFor="let film of imdb" class="one-movie-w">
+    <div class="all-movie" *ngIf="imdbSlice">
+        <div *ngFor="let film of imdbSlice" class="one-movie-w">
             <app-one-movie class="test" [film]="film" ></app-one-movie>
         </div>
+        <mat-paginator [length]="this.imdb.length"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page"
+              (page)="onPageChange($event)"
+              >
+
+        </mat-paginator>
     </div>
 </section>

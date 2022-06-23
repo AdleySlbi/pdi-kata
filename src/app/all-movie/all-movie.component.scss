@@ -20,6 +20,13 @@
     }
 }
 
+mat-paginator {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 @media (min-width: 768px) {
     .all-movie-w { 
