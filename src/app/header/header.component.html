@@ -5,14 +5,6 @@
         </div>
         <div class="right-w">
             <div class="search-bar">
-                <!-- TodoTs : Mettre en place le formulaire -->
-                <!-- <mat-form-field class="example-form-field" appearance="fill">
-                    <mat-label>Clearable input</mat-label>
-                    <input matInput type="text" [(ngModel)]="value">
-                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                    <mat-icon>close</mat-icon>
-                    </button>
-                </mat-form-field>  -->
                 <div class="search-w" >
                     <app-search-box (searchTextChanged)="onSearchTextEntered($event)"></app-search-box>
                 </div>
