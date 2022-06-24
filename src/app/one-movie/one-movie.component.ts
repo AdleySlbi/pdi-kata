@@ -21,7 +21,7 @@ export class OneMovieComponent implements OnInit {
 
   openDialog(){
     const dialogRef = this.dialog.open(EditDialogComponent, {
-      width: '90wh',
+      panelClass: 'dialog-dimension',
       data: this.film
     });
 
