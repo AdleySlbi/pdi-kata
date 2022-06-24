@@ -29,15 +29,15 @@
                 // CSS Version Destop : Ajouter le bon CSS dans le media query pour l'avoir directement dans le header
                 position: relative;
                 .search-w {
-                    position: absolute;
+                    // position: absolute;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 100vw;
-                    height: 60px;
+                    // width: 100vw;
+                    // height: 60px;
                     // right: -337px;
                     // top: 175%;
-                    background: linear-gradient(#424242, #000);
+                    // background: linear-gradient(#424242, #000);
                     z-index: 2;
                     display: none;
 
@@ -65,6 +65,10 @@
     }
 }
 
+.disp-n {
+    display: none;
+}
+
 // Tablet Size
 @media (min-width: 768px) {
     .header {
@@ -78,7 +82,14 @@
                 .search-bar {
                     width: 70%;
                     max-width: 300px;
+                    display: flex;
                     // background-color: #fff;
+                    .search-w {
+                        display: block;
+                    }
+                    img {
+                        display: none;
+                    }
                 }
                 .lang-w {
                     width: 10%;

@@ -15,11 +15,17 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  searchOn:boolean = false;
+
   searchText: any = "";
 
   onSearchTextEntered(searchValue: any){
     this.searchText = searchValue;
     this.searchTextChangedChild.emit(this.searchText);
+  }
+  
+  changeSearchStatus(){
+    this.searchOn = !this.searchOn
   }
 
 }
