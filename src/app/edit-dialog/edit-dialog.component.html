@@ -1,6 +1,6 @@
 <section class="edit-dialog-w">
     <h1 mat-dialog-title>Editing</h1>
-    <div mat-dialog-content>
+    <div mat-dialog-content *ngIf="data">
         <form [formGroup]="filmEdit">
             <!-- <mat-form-field> -->
             <div>
@@ -31,7 +31,7 @@
 
     </div>
     <div mat-dialog-actions>
-        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+        <button mat-button [mat-dialog-close]="filmEdit.value" cdkFocusInitial>Ok</button>
         <button mat-button (click)="onNoClick()">No Thanks</button>
     </div>
 </section>

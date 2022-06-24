@@ -26,7 +26,8 @@ export class OneMovieComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log("The dialog was closed");
-      this.filmModified = result;
+      console.log(result)
+      // this.filmModified = result;
     })
   }
 
