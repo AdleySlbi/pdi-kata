@@ -39,7 +39,10 @@ export class AllMovieComponent implements OnInit {
     this.imdbSlice = this.imdb.slice(startIndex, endIndex);
   }
 
-
+  updateJson(updatedFilm){
+    // console.log(updatedFilm.tconst)
+    // In real case project with a server side project, I would have done the PUT method at this place
+  }
 
 
 }

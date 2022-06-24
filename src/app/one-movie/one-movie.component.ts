@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
 
@@ -10,7 +10,8 @@ import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
 export class OneMovieComponent implements OnInit {
 
   @Input() film: any;
-
+  @Output() modifFilm = new EventEmitter<any>();
+  
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -27,6 +28,7 @@ export class OneMovieComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log("The dialog was closed");
       console.log(result)
+      this.modifFilm.emit(result)
       // this.filmModified = result;
     })
   }
