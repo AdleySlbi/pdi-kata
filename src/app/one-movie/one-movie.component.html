@@ -8,7 +8,7 @@
                     <span class="h1">{{ film.primaryTitle }}</span>
                     <span class="h2">Original title: {{ film.originalTitle }}</span>
                 </div>
-                <div class="img-w">
+                <div class="img-w" (click)="openDialog()">
                     <img src="../../assets/icons/icon_pencil.svg" alt="Edit button shaped as a pencil">
                 </div>
             </div>

@@ -14,6 +14,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -23,7 +26,8 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     OneMovieComponent,
     AllMovieComponent,
     SearchBoxComponent,
-    EditFormComponent
+    EditFormComponent,
+    EditDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     MatIconModule,
     MatCardModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,30 @@
+<section class="edit-dialog-w">
+    <h1 mat-dialog-title>Editing</h1>
+    <div mat-dialog-content>
+        <mat-form-field>
+            <p>Is Adult</p>
+            <mat-checkbox class="example-margin">Yes</mat-checkbox>
+            <mat-checkbox class="example-margin">No</mat-checkbox>
+        </mat-form-field>
+        <mat-form-field>
+            <p>Minutes</p>
+            <input type="text" matInput>
+        </mat-form-field>
+        <mat-form-field>
+            <p>Start year</p>
+            <input type="text" matInput>
+        </mat-form-field>
+        <mat-form-field>
+            <p>End year</p>
+            <input type="text" matInput>
+        </mat-form-field>
+        <mat-form-field>
+            <p>Genres</p>
+            <input type="text" matInput>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+    </div>
+</section>
