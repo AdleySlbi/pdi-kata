@@ -17,7 +17,9 @@ import { EditFormComponent } from './edit-form/edit-form.component';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatPaginatorModule,
     FormsModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
