@@ -25,20 +25,15 @@ export class EditDialogComponent implements OnInit {
   dataCopie = this.data
 
   ngOnInit(): void {
-    console.log(this.dataCopie)
     let newInfo: any = null;
     this.filmEdit.valueChanges.subscribe((value) => {
-      
-      // console.log("This is dataCopie.isAdult" + this.dataCopie.isAdult)
-      // console.log("This is newInfo" + value.isAdult)
 
       this.dataCopie.isAdult = value.isAdult;
       this.dataCopie.runtimeMinutes = value.runtimeMinutes;
       this.dataCopie.startYear = value.startYear;
       this.dataCopie.endYear = value.endYear;
       this.dataCopie.genres = value.genres;
-      // this.data = newInfo;
-      // console.log(this.dataCopie)
+      
     })
 
 

@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-search-box',
@@ -13,6 +14,8 @@ export class SearchBoxComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  searchInput = new FormControl('');
 
   enteredSearchValue: string = "";
 

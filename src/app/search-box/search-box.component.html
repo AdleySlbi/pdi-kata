@@ -1,4 +1,6 @@
 <div class="search-container">
-    <span>Search :</span>
-    <input type="text" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()">
+    <mat-form-field>
+        <mat-label>Search a movie</mat-label>
+        <input type="text" matInput [(ngModel)]="enteredSearchValue" [formControl]="searchInput" (input)="onSearchTextChanged()">
+    </mat-form-field>
 </div>

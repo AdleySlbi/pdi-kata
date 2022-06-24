@@ -1,22 +1,14 @@
-<section class="header">
+<section [ngClass]="{'header': searchOn === false, 'disp-n':searchOn === true}">
     <div class="header-w">
         <div class="company-logo">
             <img src="../../assets/icons/logo.svg" alt="Logo of the IMDb company">
         </div>
         <div class="right-w">
             <div class="search-bar">
-                <!-- TodoTs : Mettre en place le formulaire -->
-                <!-- <mat-form-field class="example-form-field" appearance="fill">
-                    <mat-label>Clearable input</mat-label>
-                    <input matInput type="text" [(ngModel)]="value">
-                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                    <mat-icon>close</mat-icon>
-                    </button>
-                </mat-form-field>  -->
-                <div class="search-w">
+                <div class="search-w" >
                     <app-search-box (searchTextChanged)="onSearchTextEntered($event)"></app-search-box>
                 </div>
-                <img src="../../assets/icons/icon_magnify.svg" class="img-search" alt="Search button">
+                <img src="../../assets/icons/icon_magnify.svg" class="img-search" alt="Search button" (click)="changeSearchStatus()">
             </div>
             <div class="lang-w">
                 <!-- TodoTs: Add ng-class -->
@@ -27,3 +19,10 @@
         </div>
     </div>
 </section>
+<div [ngClass]="{'header': searchOn === true, 'disp-n':searchOn === false}">
+    <div class="header-w">
+        <app-search-box (searchTextChanged)="onSearchTextEntered($event)"></app-search-box>
+        <img src="../../assets/icons/X_icon .svg" style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(220deg) brightness(107%) contrast(102%);" alt="" (click)="changeSearchStatus()">
+    </div>
+
+</div>
