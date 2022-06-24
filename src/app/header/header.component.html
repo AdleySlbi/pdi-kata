@@ -13,6 +13,9 @@
                     <mat-icon>close</mat-icon>
                     </button>
                 </mat-form-field>  -->
+                <div class="search-w">
+                    <app-search-box (searchTextChanged)="onSearchTextEntered($event)"></app-search-box>
+                </div>
                 <img src="../../assets/icons/icon_magnify.svg" class="img-search" alt="Search button">
             </div>
             <div class="lang-w">

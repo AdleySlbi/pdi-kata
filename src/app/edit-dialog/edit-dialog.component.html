@@ -1,0 +1,50 @@
+<section class="edit-dialog-w">
+    <h1 mat-dialog-title>Editing</h1>
+    <div mat-dialog-content *ngIf="data">
+        <form [formGroup]="filmEdit">
+            <!-- <mat-form-field> -->
+            <div class="wrapper-field">
+                <label>Is Adult</label>
+                <mat-radio-group aria-label="Is Adult" formControlName="isAdult">
+                    <mat-radio-button value="1">Yes</mat-radio-button>
+                    <mat-radio-button value="0">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <!-- </mat-form-field> -->
+            <div class="wrapper-field">
+                <label>Minutes </label>
+                <mat-form-field>
+                    <mat-label>Minutes</mat-label>
+                    <input matInput formControlName="minutes">
+                </mat-form-field>
+            </div>
+            
+            <div class="wrapper-field">
+                <label>Start year</label>
+                <mat-form-field>
+                    <mat-label>Start year</mat-label>
+                    <input type="text" matInput formControlName="startYear">
+                </mat-form-field>
+            </div>
+            <div class="wrapper-field">
+                <label>End year </label>
+                <mat-form-field>
+                    <mat-label>End year</mat-label>
+                    <input type="text" matInput formControlName="endYear">
+                </mat-form-field>
+            </div>
+            <div class="wrapper-field">
+                <label>Genres </label>
+                <mat-form-field>
+                    <mat-label>Genres</mat-label>
+                    <input type="text" matInput formControlName="genres">
+                </mat-form-field>
+            </div>
+        </form>
+
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button [mat-dialog-close]="dataCopie" cdkFocusInitial>Ok</button>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+    </div>
+</section>

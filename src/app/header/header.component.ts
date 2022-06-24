@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() searchTextChangedChild: EventEmitter<string> = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  searchText: any = "";
+
+  onSearchTextEntered(searchValue: any){
+    this.searchText = searchValue;
+    this.searchTextChangedChild.emit(this.searchText);
   }
 
 }

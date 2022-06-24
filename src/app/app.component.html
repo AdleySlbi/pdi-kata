@@ -1,2 +1,2 @@
-<app-header></app-header>
-<app-all-movie></app-all-movie>
+<app-header (searchTextChangedChild)="onSearchTextEnteredChild($event)"></app-header>
+<app-all-movie [searchTextField]="searchText" ></app-all-movie>
